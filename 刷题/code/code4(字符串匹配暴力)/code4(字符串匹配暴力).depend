@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1509351161 source:c:\users\user\desktop\新建文件夹 (2)\算法\code\code4(字符串匹配暴力)\main.cpp
+	<iostream>
+	<string.h>
+

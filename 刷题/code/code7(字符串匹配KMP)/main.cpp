@@ -1,0 +1,85 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+void CalcNext(char *p,int next[])
+{
+    int n=strlen(p);
+    next[0]=-1;
+    int k=-1;
+    int j=0;
+    while(j<n)
+    {
+        if(p[j]==p[k]||k==-1)
+        {
+            k++;
+            j++;
+            next[j]=k;
+        }
+        else
+        {
+            k=next[k];
+        }
+    }
+}
+
+int KMP(char *s,char *p,int next[])
+{
+    int ans=-1;
+    int i=0;//s
+    int j=0;//p
+    int pattern_len=strlen(p);
+    int n=strlen(s);
+    while(i<n)
+    {
+        if(j==-1||s[i]==p[j])
+        {
+            ++i;
+            ++j;
+        }
+        else
+            j=next[j];
+        if(j==pattern_len)
+        {
+            ans=i-pattern_len;
+            break;
+        }
+    }
+    return ans;
+}
+
+
+/*void CalcNext2(char* p,int next[])
+{
+    int nLen=strlen(p);
+    next[0]=-1
+    int k=-1;
+    int j=0;
+    while(j<nLen)
+    {
+        if(k==-1||p[j]==p[k])
+        {
+            ++k;
+            ++j;
+            if(p[j]==p[k])
+                next[j]=next[k];
+            else
+                next[j]=k;
+        }
+        else
+        {
+            k=next[k];
+        }
+    }
+}*/
+
+int main()
+{
+    char s[]="f234324fregtgt";
+    char p[]="33234";
+    int next[100];
+    CalcNext(p,next);
+    int ans=KMP(s,p,next);
+    cout<<ans<<"\n";
+    return 0;
+}
