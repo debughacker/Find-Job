@@ -1,0 +1,5 @@
+﻿  selectSort.cpp
+f:\github\find-job\刷题\code\code10(选择排序)\code10(选择排序)\selectsort.cpp(7): warning C4018: “<=”: 有符号/无符号不匹配
+f:\github\find-job\刷题\code\code10(选择排序)\code10(选择排序)\selectsort.cpp(10): warning C4018: “<”: 有符号/无符号不匹配
+  code10(选择排序).vcxproj -> F:\Github\Find-Job\刷题\code\code10(选择排序)\Debug\code10(选择排序).exe
+  code10(选择排序).vcxproj -> F:\Github\Find-Job\刷题\code\code10(选择排序)\Debug\code10(选择排序).pdb (Partial PDB)
